@@ -10,13 +10,23 @@ function adicionarTarefa(){
 
 </li>`;
 
-function excluirTarefa(){
-    
-}
     
 const lista = document.querySelector("#lista")
     lista.appendChild(item)
     inputTarefa.value=""
 }
+
+function limparLista(){
+    const lista = document.querySelector("#lista")
+    lista.innerHTML =""
+
+}
+
+
+
+
 const botao_ad = document.querySelector("#btn-adicionar")
 botao_ad.addEventListener("click", adicionarTarefa)
+
+const botao_limpar = document.querySelector("#btn-limpar")
+botao_limpar.addEventListener("click", limparLista )
